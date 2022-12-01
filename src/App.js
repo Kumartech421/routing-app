@@ -10,12 +10,27 @@ import Order from './Components/Order';
 import User from './Components/User';
 import UserDetails from './Components/UserDetails';
 import PageNotFound from './Components/PageNotFound';
+import CommonService from './ServiceComponent/CommonService';
+import CommonFunctional from './ServiceComponent/CommonFunctional';
+import PostService from './ServiceComponent/PostService';
 const LazyAbout = React.lazy(() => import('./Components/About'));
 
 function App() {
   return (
     <>
-    <NavBar />
+
+    {/* This is get api */}
+    <CommonService />
+    <CommonFunctional />
+    {/* This is get api */}
+
+
+    {/* This is Post api */}
+     <PostService />
+
+
+
+    {/* <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='about' element={<React.Suspense fallback="loading............."><LazyAbout /></React.Suspense>} />
@@ -24,10 +39,10 @@ function App() {
         <Route path='user' element={<User />}>
           <Route index element={<UserDetails />} />
           <Route path=':userId' element={<UserDetails />} />
-          {/* <Route path='userDetails' element={<UserDetails />} /> */}
+          <Route path='userDetails' element={<UserDetails />} />
         </Route>
         <Route path='*' element={<PageNotFound />} />
-      </Routes>
+      </Routes> */}
     </>
   );
 }
