@@ -1,0 +1,1 @@
+export const CAKE_SHOP = 'CAKE_SHOP';

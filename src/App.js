@@ -13,20 +13,28 @@ import PageNotFound from './Components/PageNotFound';
 import CommonService from './ServiceComponent/CommonService';
 import CommonFunctional from './ServiceComponent/CommonFunctional';
 import PostService from './ServiceComponent/PostService';
+import ParentComp from './PureComponent/ParentComp';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import CakeShopComponent from './redux/cake/CakeShopComponent';
 const LazyAbout = React.lazy(() => import('./Components/About'));
 
 function App() {
   return (
+    <Provider store={store}>
     <>
-
+      <CakeShopComponent />
+    </> 
+    </Provider>
+  )
     {/* This is get api */}
-    <CommonService />
-    <CommonFunctional />
+    {/* <CommonService />
+    <CommonFunctional /> */}
     {/* This is get api */}
 
 
     {/* This is Post api */}
-     <PostService />
+     {/* <PostService /> */}
 
 
 
@@ -43,8 +51,8 @@ function App() {
         </Route>
         <Route path='*' element={<PageNotFound />} />
       </Routes> */}
-    </>
-  );
+    {/* </> */}
+  {/* ); */}
 }
 
 export default App;
