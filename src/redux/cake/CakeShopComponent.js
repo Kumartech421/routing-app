@@ -15,13 +15,13 @@ class CakeShopComponent extends React.Component {
 
 const mapStateToProps = state => {
     return{
-        NumOfCakes : state.NumOfCakes
+        NumOfCakes : state.cake.NumOfCakes
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        CakeActions : () => dispatch(CakeAdd())
+        CakeActions : () => dispatch(CakeActions())
     }
 }
  

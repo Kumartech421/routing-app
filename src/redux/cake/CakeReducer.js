@@ -5,7 +5,7 @@ const InitialState = {
 }
 const CakeReducer = (state = InitialState, action) =>{
     switch(action.type){
-        case CAKE_SHOP : return {
+        case 'CAKE_SHOP' : return {
             ...state, NumOfCakes : state.NumOfCakes - 1
         }
         case 'CAKE_ADD' : return {

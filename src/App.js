@@ -17,6 +17,7 @@ import ParentComp from './PureComponent/ParentComp';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import CakeShopComponent from './redux/cake/CakeShopComponent';
+import IceCreamComponent from './redux/IceCream/IceCreamComponent';
 const LazyAbout = React.lazy(() => import('./Components/About'));
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
     <Provider store={store}>
     <>
       <CakeShopComponent />
+      <IceCreamComponent />
     </> 
     </Provider>
   )
